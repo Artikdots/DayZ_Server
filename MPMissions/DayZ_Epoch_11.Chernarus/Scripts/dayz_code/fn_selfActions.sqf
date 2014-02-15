@@ -14,6 +14,7 @@ _inVehicle = (_vehicle != player);
 
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _canDo = (!r_drag_sqf and !r_player_unconscious and !_onLadder);
+
 // ---------------------------------------Krixes Self Bloodbag Start------------------------------------
     _mags = magazines player;
  
@@ -467,7 +468,6 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
         player removeAction s_clothes;
         s_clothes = -1;
     };
-	
 	// logic vars
 	_player_cook = false;
 	_player_boil = false;
@@ -908,8 +908,6 @@ if (!isNull cursorTarget and !_inVehicle and !_isPZombie and (player distance cu
 	s_player_fillfuel = -1;
 	player removeAction s_player_studybody;
 	s_player_studybody = -1;
-	player removeAction s_clothes;
-    s_clothes = -1;
 	//Dog
 	player removeAction s_player_tamedog;
 	s_player_tamedog = -1;
