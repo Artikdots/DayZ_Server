@@ -41,6 +41,8 @@ dayz_maxAnimals = 5; // Default: 8
 dayz_tameDogs = true;
 DynamicVehicleDamageLow = 0; // Default: 0
 DynamicVehicleDamageHigh = 100; // Default: 100
+DynamicVehicleFuelLow = 0;
+DynamicVehicleFuelHigh = 100;
 
 DZE_BuildOnRoads = false; // Default: False
 
@@ -51,6 +53,12 @@ dayz_fullMoonNights = true;
 DZE_DeathMsgGlobal = true;
 DZE_DeathMsgSide = true;
 DZE_DeathMsgTitleText = false;
+
+//Non destructable bases
+DZE_GodModeBase = true;
+
+//DZE_requireplot override variable added
+DZE_requireplot = 0; 
 
 // Loadout config
 DefaultMagazines = ["17Rnd_9x19_glock17","17Rnd_9x19_glock17","17Rnd_9x19_glock17","17Rnd_9x19_glock17","ItemBloodbag","ItemBandage","ItemBandage","ItemMorphine","FoodBaconCooked","ItemWaterbottleBoiled"];
