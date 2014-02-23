@@ -25,9 +25,9 @@ if ((typeName _objectID != "string") || (typeName _uid != "string")) then
     _objectID = "0";
     _uid = "0";
 };
-//if (_sarge) exitWith {  };
+if (_object getVariable "Sarge" == 1) exitWith {};
 if (!_parachuteWest and !(locked _object)) then {
-	if (_objectID == "0" && _uid == "0" && (vehicle _object getVariable ["Sarge",0] != 1)) then
+	if (_objectID == "0" && _uid == "0") then
 	{
 		_object_position = getPosATL _object;
     	_isNotOk = true;
@@ -36,7 +36,6 @@ if (!_parachuteWest and !(locked _object)) then {
 
 // do not update if buildable and not ok
 if (_isNotOk and _isbuildable) exitWith {  };
-
 
 // delete if still not ok
 if (_isNotOk) exitWith { deleteVehicle _object; diag_log(format["Deleting object %1 with invalid ID at pos [%2,%3,%4]",typeOf _object,_object_position select 0,_object_position select 1, _object_position select 2]); };
